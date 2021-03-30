@@ -1,0 +1,31 @@
+
+
+.basket_btn-default, .basket_btn-hover, .basket_btn-onclick{
+  width: 165px;
+  height: 43px;
+  background-color: #00A54D;
+  border-radius: 30px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: inline-flex;
+  border: none; 
+  outline: none;
+}
+.basket_btn-hover, .basket_btn-onclick {
+  background-color: #0C8343;
+}
+
+.basket-list {
+  list-style: none;
+  display: flex;
+}
+.basket-item {
+  margin-right: 35px;
+}
+

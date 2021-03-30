@@ -1,0 +1,21 @@
+.filter_container {
+  height: 177px;
+  width: 345px;
+  border-radius: 5px;
+  background-color: #ECECEC;
+  list-style: none;
+  position: relative;
+
+}
+.filter-name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  position: absolute;
+  height: 45%;
+}
+.filter_item {
+  height: 55px;
+  position: relative;
+}

@@ -1,0 +1,9 @@
+mixin reset_btn(state, title)
+  li.reset-item
+    .reset_title= title
+    button(class = state)  Сбросить
+ 
+ul.reset-list 
+  +reset_btn('reset_btn-default', 'default')
+  +reset_btn('reset_btn-hover', ':hover')
+  +reset_btn('reset_btn-onclick', ':on click')

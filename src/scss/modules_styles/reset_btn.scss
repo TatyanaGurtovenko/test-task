@@ -1,0 +1,27 @@
+.reset_btn-default, .reset_btn-hover, .reset_btn-onclick{
+  background-color: #00A54D;
+  border-radius: 30px;
+  height: 40px;
+  width: 104px;
+  border: none; outline: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+}
+.reset_btn-hover, .reset_btn-onclick {
+  background-color: #0C8343;
+}
+
+.reset-list {
+  list-style: none;
+  display: flex;
+}
+.reset-item {
+  margin-right: 35px;
+}
+

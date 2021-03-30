@@ -1,0 +1,9 @@
+mixin basket_btn(state, title)
+  li.basket-item
+    .basket_title= title
+    button(class = state)  В корзину
+ 
+ul.basket-list 
+  +basket_btn('basket_btn-default', 'default')
+  +basket_btn('basket_btn-hover', ':hover')
+  +basket_btn('basket_btn-onclick', ':on click')

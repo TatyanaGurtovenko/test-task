@@ -1,0 +1,19 @@
+mixin product(img, name, weight, oldPrice, price)
+  li.product-item
+    img.product-img
+    .product-about
+      h3.product-name= name
+      span.product-weight= weight 
+    .price-list
+      .old-price= oldPrice
+      .actual-price= price
+    .product-btn  
+      .product-count 
+      .product-add В корзину
+
+       
+
+
+ul.product-list 
+  +product('', 'Копченая паприка Santa Maria,', '230г', '643', '449 p.')
+  +product('', 'Копченая паприка Santa Maria,', '230г', '', '449 p.')
