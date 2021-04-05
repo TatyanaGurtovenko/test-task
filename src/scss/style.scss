@@ -1,4 +1,4 @@
-
+@import "node_modules/bootstrap/scss/bootstrap";
 
 @import "../scss/modules_styles/product.scss";
 body {
@@ -8,10 +8,16 @@ body {
 @import "../scss/modules_styles/check_btn.scss";
 @import "../scss/modules_styles/basket_btn.scss";
 @import "../scss/modules_styles/filter.scss";
+@import "../scss/modules_styles/nav.scss";
+@import "../scss/modules_styles/pagination.scss";
+@import "../scss/modules_styles/sorting.scss";
+@import "../scss/modules_styles/add_btn.scss";
+@import "../scss/page_styles/elements.scss";
+@import "../scss/page_styles/catalog.scss";
 
 
-body {
-  font-size: 15px;
+.wrapper {
+  min-height: 100vh;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto&display=swap');

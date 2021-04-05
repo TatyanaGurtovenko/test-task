@@ -1,0 +1,21 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+    block head
+      link(rel='stylesheet', href='css/style.css')
+
+  body
+    block content 
+      .wrapper
+        .catalog-container 
+          .catalog-title
+          .catalog
+            .catalog__columns
+              .filters
+              .catalog__item
+
+            include modules/product.pug
+    block script

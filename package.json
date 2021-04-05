@@ -18,5 +18,8 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0"
   }
 }

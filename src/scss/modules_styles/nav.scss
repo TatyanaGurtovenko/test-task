@@ -1,0 +1,16 @@
+.nav_item {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  list-style: none;
+  margin-right: 10px;
+  color: #C4C4C4;
+  cursor: pointer;
+}
+.nav_item:hover {
+  color: #606060;
+}
+.nav_list {
+  display: flex;
+}

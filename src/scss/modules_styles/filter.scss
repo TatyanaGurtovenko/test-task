@@ -5,6 +5,7 @@
   background-color: #ECECEC;
   list-style: none;
   position: relative;
+  display: inline-flex;
 
 }
 .filter-name {
@@ -17,5 +18,14 @@
 }
 .filter_item {
   height: 55px;
-  position: relative;
+  display: flex;
+  
+}
+.filter-expand {
+  color: #00A54D;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  cursor: pointer;
 }

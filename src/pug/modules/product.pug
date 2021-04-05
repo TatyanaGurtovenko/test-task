@@ -1,6 +1,7 @@
+include add_btn
 mixin product(img, name, weight, oldPrice, price)
   li.product-item
-    img.product-img
+    img(src= img).product-img
     .product-about
       h3.product-name= name
       span.product-weight= weight 
@@ -10,10 +11,11 @@ mixin product(img, name, weight, oldPrice, price)
     .product-btn  
       .product-count 
       .product-add В корзину
+      
 
        
 
 
 ul.product-list 
-  +product('', 'Копченая паприка Santa Maria,', '230г', '643', '449 p.')
-  +product('', 'Копченая паприка Santa Maria,', '230г', '', '449 p.')
+  +product('./img/product/product_1.png', 'Копченая паприка Santa Maria,', '230г', '643', '449 p.')
+  +product('./img/product/product_1.png', 'Копченая паприка Santa Maria,', '230г', '', '449 p.')

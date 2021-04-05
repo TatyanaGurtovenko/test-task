@@ -1,18 +1,15 @@
 .product-item {
-  display: block;
-	width: 330px;
-  height: 450px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
+  list-style: none;
 }
 .product-img {
   width: 200px;
   height: 200px;
-  background-image: url('../img/product/photo_1.png');
   border: none; 
 }
 .actual-price {

@@ -1,0 +1,25 @@
+.add__button  {
+  background-color: #ECECEC;
+  border-radius: 30px;
+  width: 111px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  color: #00A54D;
+  cursor: pointer;
+}
+.add__button-content  {
+  display: flex;
+  flex-direction: row;
+}
+.button-minus {
+  margin-right: 20px;
+} 
+.button-count {
+  margin-right: 20px;
+}

@@ -1,0 +1,26 @@
+include utils/mixins
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+    block head
+      link(rel='stylesheet', href='css/style.css')
+
+  body
+    block content 
+      .wrapper
+          .elements__container
+            .elements-row
+                include modules/product.pug
+                include modules/reset_btn.pug
+                include modules/pagination.pug
+                include modules/add_btn.pug
+                include modules/basket_btn.pug
+            .elements-row
+                include modules/filter.pug
+                include modules/nav.pug
+                include modules/check_btn.pug
+                include modules/sorting.pug

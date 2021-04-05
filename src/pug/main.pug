@@ -1,7 +1,11 @@
 include utils/mixins
 
+
+
+
+
 doctype html
-html(lang='en')
+html(lang='ru')
   head
     meta(charset='utf-8')
     title #{title}
@@ -11,9 +15,50 @@ html(lang='en')
 
   body
     block content 
-      include modules/product.pug
-      include modules/filter.pug
-      include modules/reset_btn.pug
-      include modules/check_btn.pug
-      include modules/basket_btn.pug
+      .wrapper
+        .catalog__container 
+          .nav__container 
+            include modules/nav.pug
+            h3.catalog__title Новинки продуктов
+          .catalog__columns.container
+            .row
+              .col
+                include modules/filter.pug
+              .col
+                .catalog  
+                    .catalog__header  
+                      .catalog__header-left 
+                        img(src="./img/rect.svg", alt="rect").img-rect
+                        img(src="./img/list.svg", alt="list").img-list
+                        include modules/check_btn.pug
+                      .catalog__header-right 
+                        .sort__container
+                          include modules/sorting.pug
+                    .catalog__content
+                      ul.product-list
+                        .container 
+                          .row.row-cols-3
+                              .col
+                                +product('./img/product/product_1.png', 'Копченая  Santa Maria, ', '230г', '643', '449 p.')
+                              .col 
+                                +product('./img/product/product_2.png', 'Конфеты «Фруже», абрикос с миндалём в белом шоколаде, ', '220г', '', '140 p.')
+                              .col
+                                +product('./img/product/product_3.png', 'Печенье бисквитное Casa Dolcini Lady Fingers, ', '200г', '', '213 p.')
+                              .col
+                                +product('./img/product/product_4.png', 'Шоколад молочный Alpen Gold Max Fun, ', '160г', '147 p.', '120 p.')
+                              .col
+                                +product('./img/product/product_5.png', 'Шоколад молочный Alpen Gold Max Fun, ', '160г', '', '120 p.')
+                              .col
+                                +product('./img/product/product_6.png', 'Прованские травы Santa Maria, ', '6г', '', '39 p.')
+                    
+                      
+
+
+                      
+                    
+
+                    
+                  
+             
     block script
+      script(src='./js/script.js')
