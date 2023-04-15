@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol viewBox="0 0 512 512" id="arrow">
+        <polygon points="256.5,448.5 448.5,256.5 336.5,256.5 336.5,64.5 176.5,64.5 176.5,256.5 64.5,256.5 "/>
+    </symbol>
+    <symbol width="41" height="34" viewBox="0 0 41 34" fill="none" id="logo">
+        <rect x="1.5" y="2" width="12" height="6" stroke="#006CFE" stroke-width="3"/>
+        <rect x="14.5" y="2" width="12" height="6" stroke="#006CFE" stroke-width="3"/>
+        <rect x="27.5" y="2" width="12" height="6" stroke="#006CFE" stroke-width="3"/>
+        <rect x="1.5" y="14" width="12" height="6" stroke="#006CFE" stroke-width="3"/>
+        <rect x="14.5" y="14" width="12" height="6" stroke="#006CFE" stroke-width="3"/>
+        <rect x="27.5" y="14" width="12" height="6" stroke="#006CFE" stroke-width="3"/>
+        <rect x="1.5" y="26" width="12" height="6" stroke="#006CFE" stroke-width="3"/>
+        <rect x="14.5" y="26" width="12" height="6" stroke="#006CFE" stroke-width="3"/>
+        <rect x="27.5" y="26" width="12" height="6" stroke="#006CFE" stroke-width="3"/>
+    </symbol>
+    <symbol viewBox="0 0 9 5" fill="none" id="arrow-big">
+        <path d="M0 5L9 5L4.5 -3.93402e-07L0 5Z" fill="#006CFE"/>
+    </symbol>
+</svg>
