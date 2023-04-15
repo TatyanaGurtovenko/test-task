@@ -129,7 +129,29 @@ export default {
       searchMessage: false
     }
   },
+  created() {
+    const savedState = localStorage.getItem('myApp');
+    if (savedState) {
+      const state = JSON.parse(savedState);
+      this.searchQuery = state.searchQuery;
+      this.sortField = state.sortField;
+      this.sortDirection = state.sortDirection;
+    }
+  },
+  mounted() {
+    this.$watch('searchQuery', this.saveState);
+    this.$watch('sortField', this.saveState);
+    this.$watch('sortDirection', this.saveState);
+  },
   methods: {
+    saveState() {
+      const state = {
+        searchQuery: this.searchQuery,
+        sortField: this.sortField,
+        sortDirection: this.sortDirection,
+      };
+      localStorage.setItem('myApp', JSON.stringify(state));
+    },
     sumScores(student) {
       let total = 0;
       for (let i = 0; i < student.subjects.length; i++) {
