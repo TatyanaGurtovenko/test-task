@@ -2,7 +2,7 @@
   <div class="content">
     <div class="search-input">
       <img src="../assets/img/search.svg" alt="">
-      <input type="text" placeholder="Поиск" v-model="searchQuery" @input="searchItem">
+      <input type="text" placeholder="Поиск" v-model="searchQuery">
     </div>
     <div class="enrolled__table">
       <div class="mobile-sort">
@@ -30,7 +30,7 @@
           <th v-for="item in headers">
             <div @click="sort(item.sortBy)">
               {{ item.title }}
-              <svg class="icon icon-arrow" :class="{bottom: sortField=== item.sortBy && sortDirection === 'asc'}">
+              <svg class="icon icon-arrow" v-if="item.sortBy === sortField" :class="{bottom: sortField=== item.sortBy && sortDirection === 'asc'}">
                 <use xlink:href="../../src/assets/sprite.svg#arrow"></use>
               </svg>
             </div>
@@ -137,18 +137,25 @@ export default {
       this.sortField = state.sortField;
       this.sortDirection = state.sortDirection;
     }
+    this.getSortedList()
   },
   mounted() {
     this.$watch('searchQuery', this.saveState);
     this.$watch('sortField', this.saveState);
     this.$watch('sortDirection', this.saveState);
   },
+  beforeDestroy() {
+    console.log('saving state before destroying component');
+    this.saveState();
+  },
   methods: {
     saveState() {
+      console.log('saving state to localStorage');
       const state = {
         searchQuery: this.searchQuery,
         sortField: this.sortField,
         sortDirection: this.sortDirection,
+
       };
       localStorage.setItem('myApp', JSON.stringify(state));
     },
@@ -179,21 +186,6 @@ export default {
         this.sortDirection = 'asc'
       }
       this.getSortedList()
-    },
-    searchItem() {
-      let copyList = this.data.slice()
-      let searchedList = this.sortedList
-      if (this.searchQuery.trim() === '') {
-        this.sortedList = copyList
-      }
-      if (this.sortedList.length === 0) {
-        this.searchMessage = true
-      }
-      const queries = this.searchQuery.trim().toLowerCase().split(/\s+/)
-      searchedList = this.sortedList.filter(result =>
-          queries.every(query => result.name.toLowerCase().includes(query))
-      )
-      this.sortedList = searchedList
     },
     getSortedList() {
       if (this.sortField === 'name') {
@@ -237,6 +229,24 @@ export default {
   watch: {
     sortDirection() {
       this.getSortedList()
+    },
+    searchQuery: {
+      handler: function(newVal) {
+        let copyList = this.data.slice()
+        let searchedList = this.sortedList
+        if (newVal.trim() === '') {
+          this.sortedList = copyList
+          return
+        }
+        console.log(searchedList.length)
+        const queries = newVal.trim().toLowerCase().split(/\s+/)
+        searchedList = copyList.filter(result =>
+            queries.every(query => result.name.toLowerCase().includes(query))
+        )
+        this.sortedList = searchedList
+        this.searchMessage = searchedList.length === 0;
+      },
+      immediate: true
     }
   },
 }
@@ -436,6 +446,7 @@ export default {
 .icon-arrow {
   fill: #006CFE;
   stroke-width: 2px;
+  stroke: #006CFE;
   height: 11px;
   width: 10px;
   transition: 0.2s;

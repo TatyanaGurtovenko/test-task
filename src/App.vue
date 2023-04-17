@@ -75,26 +75,4 @@ body {
   margin-bottom: 20px;
 }
 
-@font-face {
-  font-family: ProximaNova;
-  font-weight: 400;
-  font-style: normal;
-  src: local("ProximaNova Regular"), url("../src/assets/fonts/proxima-nova-regular.woff") format("woff");
-}
-
-
-@font-face {
-  font-family: ProximaNova;
-  font-weight: 700;
-  font-style: normal;
-  src: local("ProximaNova Extrabold"), url("../src/assets/fonts/proxima-nova-extrabold.woff") format("woff");
-}
-
-@font-face {
-  font-family: ProximaNova;
-  font-weight: 800;
-  font-style: normal;
-  src: local("ProximaNova Bold"), url("../src/assets/fonts/proxima-nova-bold.woff") format("woff");
-}
-
 </style>
